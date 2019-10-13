@@ -1,8 +1,6 @@
 import numpy
 import praw
 from textblob import TextBlob
-print('truck');
-
 
 
 reddit = praw.Reddit(client_id='gPkxqeRaHjXmug', \

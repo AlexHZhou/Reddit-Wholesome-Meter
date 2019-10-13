@@ -13,9 +13,7 @@ while continueSpam:
         print('Problem accessing server.', response.status_code)
 
     response = requests.get('https://www.reddit.com/r/wholesomememes/comments/dgz1n8/wholesome_hotel_horn/')
-# print(response.text)
-# print(response.json())
-# print(response.headers);
+
 
 soup = BeautifulSoup(response.text, 'html.parser')
 soup.prettify()
