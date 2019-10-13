@@ -1,37 +1,45 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[3]:
+# In[19]:
 
 
 import numpy
 import praw
+
+import warnings
+warnings.filterwarnings("ignore")
 
 import matplotlib.pyplot as plt
 
 from textblob import TextBlob
 
 import nltk
-nltk.download('vader_lexicon')
+#nltk.download('vader_lexicon')
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
+
 
 reddit = praw.Reddit(client_id='gPkxqeRaHjXmug',                      client_secret='xNCTXJQQQIIsIGG3M9UF_DOX2I8',                      user_agent='dubhackScrape',                      username='scrollAway_throwAway',                      password='dubHacks2019')
 
 #subreddits = ['WholesomeMemes', 'meirl', 'politics', 'math', 'learnpython', 'funny', 'gaming', 'Music', 'travel']
+print('What subreddit would you like to analyze the comments of? Examples: food, wholesomeMemes, learnPython')
 subredditInput = input()
+print('Thank you, please wait roughly 10 seconds for results.')
 subreddits = [subredditInput]
 for x in subreddits:
     
     subreddit = reddit.subreddit(x)
 
     sid = SentimentIntensityAnalyzer()
+    
+    numTotalComments = 0
 
     avgSubmissionNeg = []
     avgSubmissionPos = []
     avgSubmissionNeu = []
     avgSubmissionPolar = []
     avgSubmissionSubj = []
-    for submission in subreddit.hot(limit=8):
+    for submission in subreddit.top(limit=8):
         negative = 0
         positive = 0
         neutral = 0
@@ -64,6 +72,7 @@ for x in subreddits:
         avgSubmissionPos.append(positive)
         avgSubmissionPolar.append(polar)
         avgSubmissionSubj.append(subjective)
+        numTotalComments = numComments + numTotalComments
 
     subRedditAverage = [0, 0, 0, 0, 0]
     length = len(avgSubmissionNeg)
@@ -78,11 +87,17 @@ for x in subreddits:
     pos = round(subRedditAverage[2] / length,3)
     neut = 1 - neg - pos
     sizes = [neg, neut, pos]
-    colors = ['gold', 'yellowgreen', 'lightcoral']
+    colors = ['red', 'khaki', 'yellowgreen']
 
     labels = 'Negative', 'Neutral', 'Positive'
     # Plot
-    plt.pie(sizes, labels=labels, colors=colors, shadow=False, startangle=0)
+    
+    print('This chart shows the percentage of ' + str(numTotalComments) + " comments from the top 8 posts of r/" + subredditInput + ".")
+    
+    fig = plt.figure("r/" + subredditInput)
+    
+    plt.pie(sizes, labels=labels, colors=colors, shadow=False, startangle=0,
+           autopct='%1.1f%%', textprops={'fontsize': 14})
 
     plt.axis('equal')
     plt.show()
