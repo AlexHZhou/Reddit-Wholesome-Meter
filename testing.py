@@ -19,7 +19,8 @@ reddit = praw.Reddit(client_id='gPkxqeRaHjXmug', \
                      username='scrollAway_throwAway', \
                      password='dubHacks2019')
 
-subreddits = ['WholesomeMemes', 'meirl', 'politics', 'math', 'learnpython', 'funny', 'gaming', 'Music', 'travel']
+#subreddits = ['WholesomeMemes', 'meirl', 'politics', 'math', 'learnpython', 'funny', 'gaming', 'Music', 'travel']
+subreddits = ['CasualConversation']
 for x in subreddits:
     subreddit = reddit.subreddit(x)
 
@@ -79,3 +80,4 @@ for x in subreddits:
     print("positivity: ", round(subRedditAverage[2] / length,3))
     print("Polarization: ", round(subRedditAverage[3] / length, 3))
     print("Subjectivity: ", round(subRedditAverage[4] / length, 3), '\n')
+

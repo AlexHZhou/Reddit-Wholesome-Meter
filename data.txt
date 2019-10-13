@@ -60,3 +60,10 @@ neutral:  0.804
 positivity:  0.159
 Polarization:  0.211
 Subjectivity:  0.42
+
+Info about r/ CasualConversation
+negativity:  0.04
+neutral:  0.629
+positivity:  0.331
+Polarization:  0.289
+Subjectivity:  0.441
