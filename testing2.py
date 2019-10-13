@@ -11,8 +11,6 @@ from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import flair
 flair_sentiment = flair.models.TextClassifier.load('en-sentiment')
 
-
-
 reddit = praw.Reddit(client_id='gPkxqeRaHjXmug', \
                      client_secret='xNCTXJQQQIIsIGG3M9UF_DOX2I8', \
                      user_agent='dubhackScrape', \
