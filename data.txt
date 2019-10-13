@@ -1,0 +1,62 @@
+Info about r/ WholesomeMemes
+negativity:  0.066
+neutral:  0.706
+positivity:  0.22
+Polarization:  0.156
+Subjectivity:  0.414
+
+Info about r/ meirl
+negativity:  0.095
+neutral:  0.82
+positivity:  0.084
+Polarization:  0.016
+Subjectivity:  0.22
+
+Info about r/ politics
+negativity:  0.103
+neutral:  0.807
+positivity:  0.09
+Polarization:  -0.005
+Subjectivity:  0.376
+
+Info about r/ math
+negativity:  0.046
+neutral:  0.824
+positivity:  0.13
+Polarization:  0.054
+Subjectivity:  0.335
+
+Info about r/ learnpython
+negativity:  0.044
+neutral:  0.896
+positivity:  0.06
+Polarization:  0.056
+Subjectivity:  0.318
+
+Info about r/ funny
+negativity:  0.08
+neutral:  0.8
+positivity:  0.118
+Polarization:  0.061
+Subjectivity:  0.28
+
+Info about r/ gaming
+negativity:  0.074
+neutral:  0.768
+positivity:  0.157
+Polarization:  0.092
+Subjectivity:  0.366
+
+Info about r/ Music
+negativity:  0.102
+neutral:  0.727
+positivity:  0.172
+Polarization:  0.123
+Subjectivity:  0.454
+
+Info about r/ travel
+negativity:  0.036
+neutral:  0.804
+positivity:  0.159
+Polarization:  0.211
+Subjectivity:  0.42
