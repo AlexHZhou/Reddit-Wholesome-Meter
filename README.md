@@ -9,4 +9,4 @@ Numpy, matplotlib
 PRAW (Python Reddit API Wrapper)
 Textblob (sentiment analysis based on the Natural Learning Toolkit)
 
-![data](https://github.com/AlexHZhou/Reddit-Wholesome-Meter/data.png)
+![data](https://github.com/AlexHZhou/Reddit-Wholesome-Meter/blob/master/data.png)
